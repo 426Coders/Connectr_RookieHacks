@@ -1,0 +1,35 @@
+<h4 class="ui center aligned medium icon header">
+  Say Something...
+</h4>
+<div class="ui two column grid">
+  <div class="twelve wide column">
+    <div class="ui fluid raised card chatbox">
+      <div class="content" id="messages">
+        <div class="ui feed" id="message-container">
+          <%= render @messages%>
+        </div>
+      </div>
+      <div class="extra content">
+        <%= form_for(@message, html: { class: "ui reply form", role: "form", id: "message_form" }, url: message_path, remote: true) do |f|%>
+          <div class="field">
+            <div class="ui fluid input">
+              <%= f.text_field :body, placeholder: "Enter a message..."%>
+              <%= f.button 'Send'.html_safe, class: "ui orange icon button" %>
+            </div>
+          </div>
+        <%end%>
+      </div>
+    </div>
+  </div>
+  <div class="four wide column">
+    <div class="ui fluid raised card chatbox">
+      <div class="content">
+        <div class="ui inverted vertical menu">
+          <%@users.each do |user|%>
+            <a class="item"><%= user.username %></a>
+          <%end%>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

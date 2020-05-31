@@ -1,0 +1,6 @@
+<% flash.each do |name, msg| %>
+  <div class="ui <%= alert_style_type(name)  %> floating message">
+    <%= msg %>
+    <i class="close icon"></i>
+  </div>
+<% end %>

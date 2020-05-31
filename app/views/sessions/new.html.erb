@@ -1,0 +1,39 @@
+<div class="login-header">
+  <h1 class="ui center aligned header">
+    Welcome to CONNECTR!
+  </h1>
+  <h2 class="ui center aligned header">
+    Login to Continue.
+  </h2>
+</div>
+<div class="ui placeholder segment">
+  <div class="ui two column very relaxed stackable grid">
+    <div class="column">
+      <div class="ui form">
+        <%= form_with(scope: :session, url: login_path, local:true)  do |f|%>
+          <div class="field">
+            <label><%=f.label :username%></label>
+            <div class="ui left input">
+              <%= f.text_field :username, id: "username", placeholder: "Username"%>
+              
+            </div>
+          </div>
+          <div class="field">
+            <label><%f.label :password%></label>
+            <div class="ui left input">
+              <%= f.password_field :password, id:"password", placeholder: "Password"%>
+              
+            </div>
+          </div>
+          <%= f.submit "Login", class: "ui blue submit orange button" %>
+        <%end%>
+      </div>
+    </div>
+    <div class="middle aligned column">
+      <%= link_to 'Sign Up'.html_safe, signup_path, class: "ui big orange button" %>
+    </div>
+  </div>
+  <div class="ui vertical divider">
+    Or
+  </div>
+</div>
