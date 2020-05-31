@@ -1,0 +1,52 @@
+body {
+    margin: 0;
+    padding: 0;
+   background-image: url(https://images.pexels.com/photos/255379/pexels-photo-255379.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
+    height: 100vh;
+  }
+  #login{
+    margin-top: 120px;
+    max-width: 600px;
+    height:auto;
+    border: 1px solid #9C9C9C;
+    background-color: #EAEAEA;
+  }
+  #register{
+    margin-top: 120px;
+    max-width: 600px;
+    height:auto;
+    border: 1px solid #9C9C9C;
+    background-color: #EAEAEA;
+  }
+  #resetPassword{
+    margin-top: 120px;
+    max-width: 600px;
+    height:auto;
+    border: 1px solid #9C9C9C;
+    background-color: #EAEAEA;
+  }
+.form-group{
+    font-weight: bold;
+}
+.navbar-nav a{
+    font-family: Arial;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.navbar-light .navbar-brand{
+    color:black;
+    font-size: 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.navbar-light .navbar-nav .nav-link{
+    color:black;
+}
+.navbar-nav{
+    text-align: center;
+}
+.nav-link{
+    padding: .2rem 1rem;
+}
